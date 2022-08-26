@@ -6,7 +6,8 @@ class SymmetricGroup(Group):
     symbol = "S"
 
     def _validate(self, value):
-        if not (isinstance(value, np.ndarray) and sorted(value) == list(range(self.n))):
+        if not (isinstance(value, np.ndarray) and sorted(value) == list(
+                range(self.n))):
             raise ValueError("Element value must be a sequence containing "
                              "0 to order-1.")
 
